@@ -1,0 +1,37 @@
+@use 'variables';
+@use 'mixins';
+
+.modal-navbar {
+   &__background {
+    @include mixins.modal-background;
+   }
+   background-color: variables.$White;
+   width: 250px;
+   padding: 28px 24px;
+   height: 100%;
+   
+   &__items {
+    //border: 1px solid red;  ** guía visual
+    margin-top: 50px;
+    display: flex;
+    //Uno encima del otro.
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    //Quitar las viñetas del <ul>
+    list-style: none;
+   }
+
+   &__link {
+    text-decoration: none;
+    color: variables.$Very-vark-blue;
+    font-weight: 700;
+    font-size: 1.1em;
+   }
+
+   &__close:hover {
+        cursor: pointer;
+   }
+
+   display: none;
+}

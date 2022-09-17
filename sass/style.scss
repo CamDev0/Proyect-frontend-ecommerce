@@ -1,0 +1,25 @@
+//Llamamos todos los partials para cargar sus diseños, siempre se llaman al inicio.
+@use 'initial';
+@use 'variables';
+@use 'header';
+@use 'navbar';
+@use 'modal-navbar';
+@use 'gallery';
+
+//Se hacen los estilos ordenadamente con las clases creadas en el index.
+.main-container {
+    position: relative;
+    width: 375px;
+    border: 1px solid black;
+    margin: auto;
+ 
+/* cuando el ancho de la página sea mínimo 1115px haga:  */
+    @media (min-width: 1115px) {
+        width: 1115px;    
+    }
+
+}
+
+
+
+

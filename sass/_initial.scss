@@ -1,0 +1,14 @@
+//Partial en sass
+@use 'variables';
+//Selector universal 
+*{
+    //todas las dimensiones a nuestro control.
+        margin: 0;
+        padding: 0;
+    //Para que no se rompa un ancho y alto especificados generalmente.
+        box-sizing: border-box;
+    }
+    
+body {
+    font-family: variables.$Font;
+}

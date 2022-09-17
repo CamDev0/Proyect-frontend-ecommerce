@@ -1,0 +1,94 @@
+@use 'variables';
+
+//Todo el header de la página
+
+.header {
+    border: 1px solid red;
+    //Ponemos el display flex y centramos todo.
+    display: flex;
+    align-items: center;
+    //Espacio entre los containers u objetos que tengamos
+    justify-content: space-between;
+    height: 68px;
+    //Padding cero arriba y abajo, 24px a los lados.
+    padding: 0, 24px;
+    @media (min-width: 1115px) {
+        height: 112px;
+        border-bottom: 1px solid variables.$Grayish-blue;
+    }
+
+    .header__navigation{
+        border: 1px solid blue;
+        height: 100%;
+        width: 175px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (min-width: 1115px) {
+            width: 590px;
+        }
+    }
+
+    //& = header  Menú burger
+    &__menu {
+       &:hover {
+        cursor: pointer;
+       } 
+
+       @media (min-width: 1115px) {
+            display: none;
+        }
+    }
+    
+    &__cart-avatar {
+        //border: 1px solid green; **guía del contenedor.
+        display: flex;
+        align-items: center;
+        width: 70px;
+        justify-content: space-between;
+        @media (min-width: 1115px) {
+            width: 125px;
+        }
+    }
+
+    &__cart {
+        position: relative;
+        &--notification {
+            display: none;
+            background-color: variables.$Orange;
+            width: 15px;
+            height: 12px;
+            border-radius: 16px;
+            //Para controlar position:absolute, se debe tener referencia de una posición relativa, en este caso tenemos esa referencia con $__cart
+            position: absolute;
+            top: -2px;
+            right: -5px;
+            //Número-notificación del carrito
+            font-size: 0.6em;
+            text-align: center;
+            color: variables.$White;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__avatar {
+        width: 24px;
+        @media (min-width: 1115px) {
+            width: 48px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            border: 2px solid variables.$Orange;
+            border-radius: 50%;
+        }
+    }
+}
+
+
+
+   
+
