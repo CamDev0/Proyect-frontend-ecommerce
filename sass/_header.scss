@@ -3,8 +3,7 @@
 //Todo el header de la página
 
 .header {
-    border: 1px solid red;
-    //Ponemos el display flex y centramos todo.
+    //border: 1px solid red;
     display: flex;
     align-items: center;
     //Espacio entre los containers u objetos que tengamos
@@ -18,7 +17,7 @@
     }
 
     .header__navigation{
-        border: 1px solid blue;
+       // border: 1px solid blue;
         height: 100%;
         width: 175px;
         display: flex;

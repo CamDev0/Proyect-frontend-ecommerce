@@ -1,0 +1,61 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.details {
+    //border: 1px solid green;
+    padding: 24px;
+    
+    &__company {
+        color: v.$Orange;
+        text-transform: uppercase; //Todo el text en mayuscula
+        font-size: 0.8em;
+        letter-spacing: 1px; //Espacio entre letras
+        margin-bottom: 12px;
+    }
+
+    &__tittle {
+        font-size: 1.7em;
+        margin-bottom: 16px;
+    }
+
+    &__descriptions {
+        font-size: 0.94em;
+        color: v.$Dark-grayish-blue;
+        line-height: 24px; //Espcio entre lineas(arriba-abajo)
+        margin-bottom: 24px;
+    }
+
+    &__prices {
+       // border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px; 
+        align-items: center;
+    }
+
+    &__now {
+        font-size: 1.8em;
+        font-weight: 700; //Engrosa la linea del texto 
+        display: flex;
+        align-items: center; //todo los contenedores centrados
+        gap: 18px; //Espacio entre contenedores del flex
+    }
+    
+    &__discount {
+        font-size: 0.5em;
+        background-color: v.$Pale-orange;
+        color: v.$Orange;
+        padding: 4px;
+        border: 4px;
+    }
+
+    &__before {
+        color: v.$Dark-grayish-blue;
+        text-decoration: line-through;
+    }
+
+    &__button {
+        @include m.buttons;
+    }
+
+}

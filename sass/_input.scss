@@ -1,0 +1,28 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+
+.input {
+    //border: 1px solid green;
+    height: 57px;
+    display: flex;
+    justify-content: space-between;
+
+    &__minus {
+      @include m.minus-plus(24px, 5px);  
+    }
+
+    &__number {
+        width: 100%;
+        border: none;
+        background-color: v.$Light-grayish-blue;
+        font-size: 1.2em;
+        font-family: v.$Font;
+        text-align: center;
+        outline: none; //Para que no se marque el borde de todo el contenedor cuando le des click.
+    }
+
+    &__plus {
+      @include m.minus-plus(19px, 3px); 
+    }
+}

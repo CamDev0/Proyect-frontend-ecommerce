@@ -1,18 +1,21 @@
 //los mixins son como funciones, para reutilizar el código.
-@use 'variables';
+@use 'variables' as v;
+
+//Color de fondo del modal, (la sombra) 
 @mixin modal-background {
-    background-color: variables.$Black-modal;
+    background-color: v.$Black-modal;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 1;
     display: none;
 }
 
 //Se le pueden pasar parámetros también.
 @mixin previous-next($top, $left) {
-    background-color: variables.$White;
+    background-color: v.$White;
     width: 40px;
     height: 40px;
     padding: 12px;
@@ -24,3 +27,34 @@
         cursor: pointer;
     }
 }
+
+@mixin minus-plus($minus, $plus) {
+    //border: 1px solid blue;
+    width: 25px;
+    height: 100%;
+    padding: $minus $plus; 
+    background-color: v.$Light-grayish-blue;
+    
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@mixin buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background-color: v.$Orange;
+    color: v.$White;
+    width: 100%;
+    height: 57px;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.9em;
+    font-weight: 700;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7; //Para poner mas claro cuando se pase el cursor.
+    }
+} 

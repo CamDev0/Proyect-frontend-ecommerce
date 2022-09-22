@@ -11,7 +11,6 @@ body {
 }
 
 .header {
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,7 +24,6 @@ body {
   }
 }
 .header .header__navigation {
-  border: 1px solid blue;
   height: 100%;
   width: 175px;
   display: flex;
@@ -128,6 +126,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
   display: none;
 }
 .modal-navbar__items {
@@ -149,7 +148,6 @@ body {
 }
 
 .gallery__image-container {
-  border: 1px solid blue;
   background-image: url("../images/image-product-1.jpg");
   height: 300px;
   width: 100%;
@@ -189,6 +187,102 @@ body {
   .gallery__thumnails {
     display: block;
   }
+}
+
+.details {
+  padding: 24px;
+}
+.details__company {
+  color: hsl(26deg, 100%, 55%);
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+.details__tittle {
+  font-size: 1.7em;
+  margin-bottom: 16px;
+}
+.details__descriptions {
+  font-size: 0.94em;
+  color: hsl(219deg, 9%, 45%);
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.details__prices {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  align-items: center;
+}
+.details__now {
+  font-size: 1.8em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.details__discount {
+  font-size: 0.5em;
+  background-color: hsl(25deg, 100%, 94%);
+  color: hsl(26deg, 100%, 55%);
+  padding: 4px;
+  border: 4px;
+}
+.details__before {
+  color: hsl(219deg, 9%, 45%);
+  text-decoration: line-through;
+}
+.details__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-color: hsl(26deg, 100%, 55%);
+  color: hsl(0deg, 0%, 100%);
+  width: 100%;
+  height: 57px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+.details__button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.input {
+  height: 57px;
+  display: flex;
+  justify-content: space-between;
+}
+.input__minus {
+  width: 25px;
+  height: 100%;
+  padding: 24px 5px;
+  background-color: hsl(223deg, 64%, 98%);
+}
+.input__minus:hover {
+  cursor: pointer;
+}
+.input__number {
+  width: 100%;
+  border: none;
+  background-color: hsl(223deg, 64%, 98%);
+  font-size: 1.2em;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  outline: none;
+}
+.input__plus {
+  width: 25px;
+  height: 100%;
+  padding: 19px 3px;
+  background-color: hsl(223deg, 64%, 98%);
+}
+.input__plus:hover {
+  cursor: pointer;
 }
 
 .main-container {
