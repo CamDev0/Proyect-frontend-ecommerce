@@ -1,0 +1,55 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.cart-modal {
+    display: none;
+   // border: 1px solid red ;
+    width: 360px;
+    height: 260px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px; //Sombras
+    position: absolute;
+    top: 75px;
+    background-color: v.$White;
+    right: 6px;
+
+    &__title {
+        font-weight: 700;
+        padding: 24px;
+        border-bottom: 1px solid v.$Grayish-blue;
+    }
+
+    &__checkout-container {
+      //  border: 1px solid red;
+        padding: 24px;
+    }
+
+    &__details-container {
+      //  border: 1px solid green;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        color: v.$Dark-grayish-blue;
+        line-height: 20px;
+    }
+
+    &__image {
+        width: 50px;
+        border-radius: 4px;
+    }
+
+    &__price span {  // selecciona el spam en la clase cart-modal__price
+        font-weight: 700;
+        color: v.$Black;
+    }
+
+    &__delete:hover {
+        cursor: pointer;
+    }
+
+    &__checkout {
+        @include m.buttons;
+    }
+
+}
