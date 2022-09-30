@@ -14,7 +14,7 @@
 }
 
 //Se le pueden pasar parámetros también.
-@mixin previous-next($top, $left) {
+@mixin previous-next($top, $left, $escondido) {
     background-color: v.$White;
     width: 40px;
     height: 40px;
@@ -28,7 +28,13 @@
     }
 
     @media(min-width: 1115px) {
-        display: none;
+        @if ($escondido)
+        {
+            display: block;
+        } 
+        @else {
+            display: none;
+        }
     }
 }
 

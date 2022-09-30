@@ -12,14 +12,18 @@
         background-size: cover;
         //rodamos la imagen hacia arriba
         background-position-y: -35px;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__previous {
-        @include mixins.previous-next(190px, 10px);
+        @include mixins.previous-next(190px, 10px, false);
     }
 
     &__next {
-        @include mixins.previous-next(190px, 320px);
+        @include mixins.previous-next(190px, 320px, false);
     }
 
     &__thumnails {
@@ -49,4 +53,5 @@
             background-position-y: 0;
         }
     }
+
 }

@@ -8,12 +8,13 @@
 @use 'details';
 @use 'input';
 @use 'modal-cart';
+@use 'modal-gallery';
 
 //Se hacen los estilos ordenadamente con las clases creadas en el index.
 .main-container {
     position: relative;
     width: 375px;
-    border: 1px solid black;
+    //border: 1px solid black;
     margin: auto;
  
 /* cuando el ancho de la página sea mínimo 1115px haga:  */
