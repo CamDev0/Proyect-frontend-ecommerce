@@ -32,6 +32,17 @@
     }
 }
 
+//clase que funciona para la logica de mostrar y quitar las ventanas al precionar el carrito y otras ventanas modal
+.show {
+    display: block;
+}
 
+
+.cart-empty {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 700;
+    color: variables.$Black-modal;
+}
 
 
