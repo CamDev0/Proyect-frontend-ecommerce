@@ -117,7 +117,6 @@ body {
   width: 250px;
   padding: 28px 24px;
   height: 100%;
-  display: none;
 }
 .modal-navbar__background {
   background-color: hsla(0deg, 0%, 0%, 0.5);
@@ -127,7 +126,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 1;
-  display: none;
+  overflow: hidden;
 }
 .modal-navbar__items {
   margin-top: 50px;
@@ -145,6 +144,11 @@ body {
 }
 .modal-navbar__close:hover {
   cursor: pointer;
+}
+@media (min-width: 1115px) {
+  .modal-navbar {
+    display: none;
+  }
 }
 
 .gallery__image-container {
@@ -408,9 +412,9 @@ body {
   width: 100%;
   height: 100%;
   z-index: 1;
+  overflow: hidden;
   display: none;
   place-content: center;
-  display: none;
 }
 .modal-gallery__close-container {
   text-align: right;
@@ -504,6 +508,10 @@ body {
 
 .show {
   display: block;
+}
+
+.flex {
+  display: flex;
 }
 
 .cart-empty {

@@ -7,9 +7,8 @@
     &__background {
         //border: 1px solid red;
         @include m.modal-background;  
-        //display: grid;
-        place-content: center;
         display: none;
+        place-content: center;
     }
 
     &__close-container {
